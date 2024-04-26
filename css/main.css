@@ -1,0 +1,38 @@
+.centred {
+  display: flex;
+  align-items: center;
+}
+
+header .login-singup .btn-sing, header .login-singup .btn-log {
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 2rem;
+  color: hsl(257, 7%, 63%);
+}
+header .login-singup .btn-sing:hover, header .login-singup .btn-log:hover {
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+}
+@media (max-width: 992px) {
+  header .login-singup {
+    border-top: 1px solid hsl(0, 0%, 75%);
+  }
+}
+
+.land {
+  height: 100vh;
+}
+.land .content-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.land .content-image .image, .land .content-image .content {
+  flex-basis: 50%;
+}
+@media (max-width: 992px) {
+  .land .content-image {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */

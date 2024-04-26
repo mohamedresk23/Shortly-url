@@ -1,0 +1,20 @@
+@use './gloubal-rouls';
+@use '../helpers/variables';
+@use '../helpers/maxins';
+header{
+  .login-singup{
+    .btn-sing,.btn-log{
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 2rem;
+      color: variables.$Grayish-Violet;
+      &:hover{
+        background-color: variables.$Cyan;
+        color: #fff;
+      }
+    }
+    @include maxins.preakeBointe(992px){
+      border-top: 1px solid variables.$Gray;
+    }
+  }
+}

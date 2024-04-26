@@ -1,0 +1,17 @@
+@use '../helpers/maxins';
+.land{
+  height: 100vh;
+  .content-image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    .image,.content{
+      flex-basis: 50%;
+    }
+
+    @include maxins.preakeBointe(992px){
+      flex-direction:column;
+    }
+  }
+}
