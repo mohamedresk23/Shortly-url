@@ -1,0 +1,23 @@
+@use '../helpers/maxins';
+@use '../helpers/variables';
+.last-section{
+  background-image: url(../img/bg-boost-desktop.svg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-block: 3rem;
+  background-color: variables.$Dark-Violet;
+  @include maxins.preakeBointe(992px){
+    background-image: url(../img/bg-boost-mobile.svg);
+  }
+  .btn-start{
+    background-color: variables.$Cyan;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size:18px;
+    color: #fff;
+    padding: 10px 30px;
+    width: 20%;
+    margin-top: 1.5rem;
+  }
+}

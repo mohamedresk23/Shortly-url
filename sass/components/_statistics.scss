@@ -1,0 +1,20 @@
+@use '../helpers/maxins';
+@use '../helpers/variables';
+.statistics{
+  background-color: variables.$Gray;
+  padding-top: 10rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  .contain{
+    margin-bottom: 1.5rem;
+    h1{
+      font-size: 35px;
+      font-weight: 700;
+    }
+    p{
+      font-size: 18px;
+      font-weight: 500;
+      color: variables.$Grayish-Violet;
+    }
+  }
+}
