@@ -1,6 +1,7 @@
 .centred {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 header .login-singup .btn-sing, header .login-singup .btn-log {
@@ -21,6 +22,33 @@ header .login-singup .btn-sing:hover, header .login-singup .btn-log:hover {
     align-items: flex-start;
     gap: 10px;
   }
+}
+
+footer {
+  background-color: hsl(260, 8%, 14%);
+}
+footer .log-links h3 {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+footer .log-links ul {
+  margin-inline: 0;
+  padding-inline: 0;
+}
+footer .log-links ul li {
+  list-style: none;
+}
+footer .log-links ul li a {
+  color: hsl(257, 7%, 63%);
+  font-size: 18px;
+  text-decoration: none;
+}
+footer .log-links .media {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .land {
@@ -85,6 +113,92 @@ header .login-singup .btn-sing:hover, header .login-singup .btn-log:hover {
   font-weight: 500;
   color: hsl(257, 7%, 63%);
 }
+.statistics .boxes {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-top: 90px;
+}
+@media (max-width: 767px) {
+  .statistics .boxes {
+    flex-direction: column;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    row-gap: 65px;
+  }
+}
+.statistics .boxes .box {
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 60px 15px 20px 15px;
+  text-align: start;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+.statistics .boxes .box .image-parent {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: hsl(260, 8%, 14%);
+}
+@media (max-width: 767px) {
+  .statistics .boxes .box .image-parent {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.statistics .boxes .box h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-block: 2rem;
+}
+.statistics .boxes .box p {
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(257, 7%, 63%);
+  margin-bottom: 1rem;
+}
+.statistics .boxes .box:nth-of-type(2) {
+  margin-top: 38px;
+}
+@media (max-width: 767px) {
+  .statistics .boxes .box:nth-of-type(2) {
+    margin-top: 0px;
+  }
+}
+.statistics .boxes .box:last-of-type {
+  margin-top: 76px;
+}
+@media (max-width: 767px) {
+  .statistics .boxes .box:last-of-type {
+    margin-top: 0px;
+  }
+}
+.statistics .boxes .box:not(:last-of-type)::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 8px;
+  right: -25px;
+  bottom: 50%;
+  transform: translateY(-50%);
+  background-color: hsl(180, 66%, 49%);
+}
+@media (max-width: 767px) {
+  .statistics .boxes .box:not(:last-of-type)::before {
+    height: 25px;
+    width: 8px;
+    bottom: -25px;
+    right: calc(50% - 6px);
+    transform: translate(-50%, 0);
+  }
+}
 
 .last-section {
   background-image: url(../img/bg-boost-desktop.svg);
@@ -108,4 +222,14 @@ header .login-singup .btn-sing:hover, header .login-singup .btn-log:hover {
   padding: 10px 30px;
   width: 20%;
   margin-top: 1.5rem;
+}
+@media (max-width: 767px) {
+  .last-section .btn-start {
+    width: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .last-section .btn-start {
+    width: 60%;
+  }
 }/*# sourceMappingURL=main.css.map */

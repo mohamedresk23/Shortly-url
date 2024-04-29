@@ -1,0 +1,29 @@
+@use '../helpers/maxins';
+@use '../helpers/variables';
+footer{
+  background-color: variables.$Very-Dark-Violet;
+  .log-links{
+    h3{
+      color: white;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    ul{
+      margin-inline:0 ;
+      padding-inline: 0;
+      li{
+        list-style: none;
+        a{
+          color: variables.$Grayish-Violet;
+          font-size: variables.$main-font-size;
+          text-decoration: none;
+        }
+      }
+    }
+    .media{
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+    }
+  }
+}

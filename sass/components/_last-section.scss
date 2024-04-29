@@ -19,5 +19,11 @@
     padding: 10px 30px;
     width: 20%;
     margin-top: 1.5rem;
+    @include maxins.preakeBointe(767px){
+      width: 40%;
+    }
+    @include maxins.preakeBointe(480px){
+      width: 60%;
+    }
   }
 }
