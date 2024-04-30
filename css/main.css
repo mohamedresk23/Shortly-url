@@ -91,8 +91,37 @@ footer .log-links .media {
 }
 @media (max-width: 992px) {
   .land .content-image {
+    width: 80%;
+  }
+}
+.land .form-input {
+  width: 60%;
+  padding: 3rem 1.5rem;
+  background-image: url("../../img/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-color: hsl(257, 27%, 26%);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4rem;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  .land .form-input {
     flex-direction: column-reverse;
   }
+}
+.land .form-input input {
+  width: 70%;
+  font-size: 18px;
+  padding: 6px 4px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+.land .form-input button {
+  width: 20%;
 }
 
 .statistics {

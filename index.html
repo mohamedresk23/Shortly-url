@@ -100,7 +100,7 @@
   </header>
   <!--end header-->
   <!--start land section-->
-  <section class="land">
+  <section class="land  position-relative">
     <div class="container">
       <div class=" my-5 content-image">
         <div class="content">
@@ -124,11 +124,18 @@
         </div>
       </div>
     </div>
+    <div class="form-input position-absolute d-flex align-items-center justify-content-center gap-1">
+      <input type="text" name="url" id="real-id">
+      <button class="btn btn-primary" onclick="shortenUrl()">Shorten it</button>
+    </div>
   </section>
   <!--end land section-->
   <!--start Statistics section-->
   <section class="statistics">
     <div class="container">
+      <div class="shorten-result d-flex flex-column gap-3">
+
+      </div>
       <div class="contain">
         <h1>Advanced Statistics</h1>
         <p>Track how your links are performing across the web with our
@@ -241,7 +248,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
-
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -1,43 +1,70 @@
 @use '../helpers/maxins';
 @use '../helpers/variables';
-.land{
+.land {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  .content-image{
+  .content-image {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    .image,.content{
+    .image, .content {
       flex-basis: 50%;
     }
-    .content{
-      .head{
+    .content {
+      .head {
         font-size: 35px;
         font-weight: 700;
       }
-      p{
+      p {
         font-size: 18px;
         font-weight: 500;
       }
-      .btn-start{
+      .btn-start {
         background-color: variables.$Cyan;
         border-radius: 50px;
         font-weight: 700;
-        font-size:18px;
+        font-size: 18px;
         color: #fff;
         padding: 10px 30px;
         width: 50%;
       }
-      @include maxins.preakeBointe(992px){
+      @include maxins.preakeBointe(992px) {
         text-align: center;
         margin-top: 20px;
       }
     }
-    @include maxins.preakeBointe(992px){
-      flex-direction:column-reverse;
+    @include maxins.preakeBointe(992px) {
+      width: 80%;
+    }
+  }
+  .form-input {
+    width: 60%;
+    padding: 3rem 1.5rem;
+    background-image: url('../../img/bg-boost-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: variables.$Dark-Violet;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4rem;
+    border-radius: 5px;
+    @include maxins.preakeBointe(992px) {
+      flex-direction: column-reverse;
+    }
+    input {
+      width: 70%;
+      font-size: 18px;
+      padding: 6px 4px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+    button {
+      width: 20%;
     }
   }
 }
