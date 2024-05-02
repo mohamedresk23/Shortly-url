@@ -1,19 +1,21 @@
 
-
-  // const shortenUrl= ()=> {
-  //   let shortenedUrl =  generateShortUrl(originalUrl);
-    
-  //   // document.querySelector(".shorten-result").innerText = shortenedUrl;
-  // }
-  
-  const shortenUrl= async ()=>{
-    let originalUrl = document.getElementById("real-id").value;
-    console.log(originalUrl)
-      await fetch(`https://api.shrtco.de/v2/shorten?url=${originalUrl}`)
-      .then((data) => { return data.json() })
-      .then((res)=>(console.log(res)))
-      .catch((e) => { console.log(e) })
-      // const shortenedUrl = await result.json();
-      // console.log(shortenedUrl)
-    // return shortenedUrl;
+const shortenUrl = async () => {
+  const Url = document.getElementById("real-id").value;;
+  const response = await fetch(`https://tinyurl.com/api-create.php?url=${ encodeURIComponent(Url) }`);
+  if (response.ok) {
+    const data = await response.text();
+    document.querySelector('.shorten-result').innerHTML += `
+    <div class="shorturl d-flex justify-content-between align-items-center bg-white p-1 rounded-1"> <span>${ Url }</span> 
+    <div><span class="shortUrl">${ data }</span> <button class="btn btn-primary m-3 " onclick="copyBtn()">Copy</button> </div>
+     </div>
+    `;
   }
+  else {
+    console.log("errrrrrrrrrr");
+  }
+};
+
+const copyBtn = () => {
+  var copyText = document.querySelector(".shortUrl").textContent;
+  navigator.clipboard.writeText(copyText);
+};
