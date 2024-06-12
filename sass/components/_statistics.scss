@@ -1,41 +1,56 @@
 @use '../helpers/maxins';
 @use '../helpers/variables';
-.statistics{
+.statistics {
   background-color: variables.$Gray;
   padding-top: 10rem;
   padding-bottom: 1.5rem;
   text-align: center;
-  .contain{
+  .shorten-result {
+    max-height: 400px;
+    overflow-y: scroll;
+    .main-url {
+      width: 60%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #000;
+    }
+    .shortUrl--span {
+      color: variables.$Cyan;
+      font-weight: 700;
+    }
+  }
+  .contain {
     margin-bottom: 1.5rem;
-    h1{
+    h1 {
       font-size: 35px;
       font-weight: 700;
     }
-    p{
+    p {
       font-size: variables.$main-font-size;
       font-weight: 500;
       color: variables.$Grayish-Violet;
     }
   }
-  .boxes{
+  .boxes {
     display: flex;
     justify-content: space-between;
     column-gap: 25px;
     margin-top: 90px;
-    @include maxins.preakeBointe(767px){
+    @include maxins.preakeBointe(767px) {
       flex-direction: column;
       column-gap: 0px;
       row-gap: 65px;
     }
-    .box{
+    .box {
       position: relative;
       height: fit-content;
-      padding: 60px 15px 20px 15px; 
+      padding: 60px 15px 20px 15px;
       text-align: start;
       background-color: #fff;
       border-radius: 4px;
       position: relative;
-      .image-parent{
+      .image-parent {
         position: absolute;
         top: -40px;
         left: 20px;
@@ -43,35 +58,35 @@
         height: 70px;
         border-radius: 50%;
         background-color: variables.$Very-Dark-Violet;
-        @include maxins.preakeBointe(767px){
+        @include maxins.preakeBointe(767px) {
           left: 50%;
           transform: translateX(-50%);
         }
       }
-      h2{
+      h2 {
         font-size: 30px;
         font-weight: 700;
         margin-block: 2rem;
       }
-      p{
+      p {
         font-size: variables.$main-font-size;
         font-weight: 500;
         color: variables.$Grayish-Violet;
         margin-bottom: 1rem;
       }
-      &:nth-of-type(2){
+      &:nth-of-type(2) {
         margin-top: 38px;
-        @include maxins.preakeBointe(767px){
+        @include maxins.preakeBointe(767px) {
           margin-top: 0px;
         }
       }
-      &:last-of-type{
+      &:last-of-type {
         margin-top: 76px;
-        @include maxins.preakeBointe(767px){
+        @include maxins.preakeBointe(767px) {
           margin-top: 0px;
         }
       }
-      &:not(:last-of-type)::before{
+      &:not(:last-of-type)::before {
         content: "";
         position: absolute;
         width: 25px;
@@ -80,12 +95,12 @@
         bottom: 50%;
         transform: translateY(-50%);
         background-color: variables.$Cyan;
-        @include maxins.preakeBointe(767px){
+        @include maxins.preakeBointe(767px) {
           height: 25px;
           width: 8px;
           bottom: -25px;
-          right:calc(50% - 6px);
-          transform: translate(-50%,0);
+          right: calc(50% - 6px);
+          transform: translate(-50%, 0);
         }
       }
     }

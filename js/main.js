@@ -1,18 +1,19 @@
 
 const shortenUrl = async () => {
-  const Url = document.getElementById("real-id").value;;
+  let Url = document.getElementById("real-id").value;
   const response = await fetch(`https://tinyurl.com/api-create.php?url=${ encodeURIComponent(Url) }`);
   if (response.ok) {
     const data = await response.text();
     document.querySelector('.shorten-result').innerHTML += `
-    <div class="shorturl d-flex justify-content-between align-items-center bg-white p-1 rounded-1"> <span>${ Url }</span> 
-    <div><span class="shortUrl">${ data }</span> <button class="btn btn-primary m-3 " onclick="copyBtn()">Copy</button> </div>
+    <div class="shorturl d-flex justify-content-between align-items-center bg-white p-1 rounded-1"> <span class="main-url ">${ Url }</span> 
+    <div><span class="shortUrl--span">${ data }</span> <button class="btn btn-primary m-3 " onclick="copyBtn()">Copy</button> </div>
      </div>
     `;
   }
   else {
     console.log("errrrrrrrrrr");
   }
+  document.getElementById("real-id").value ="";
 };
 
 const copyBtn = () => {
