@@ -14,6 +14,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
       color: #000;
+      @include maxins.preakeBointe(500px){
+        width: 90%;
+        margin-bottom: 30px;
+      }
     }
     .shortUrl--span {
       color: variables.$Cyan;

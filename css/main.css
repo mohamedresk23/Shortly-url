@@ -164,6 +164,12 @@ footer .log-links .media {
   text-overflow: ellipsis;
   color: #000;
 }
+@media (max-width: 500px) {
+  .statistics .shorten-result .main-url {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
 .statistics .shorten-result .shortUrl--span {
   color: hsl(180, 66%, 49%);
   font-weight: 700;
